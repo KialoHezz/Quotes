@@ -1,8 +1,9 @@
 .display {
-  background-color: rgb(14, 136, 61);
-  height: 20rem;
+  background-color: rgba(0, 255, 255, 0.535);
+  height: 30rem;
   border-radius: 0.3rem;
-  padding: 2rem 1rem;
+  padding: 0.1rem 1rem;
+  margin: 1rem;
   text-transform: capitalize;
 }
 

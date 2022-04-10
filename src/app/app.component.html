@@ -1,6 +1,5 @@
 <div class="container-fluid bg-color">
-  <p class="logo">Best<br><span>Qoute App</span>
-  </p>
+  <p class="logo">Best<br /><span>Qoute App</span></p>
   <div class="row">
     <div class="col-lg m-4">
       <!-- linked the display-quote compnent -->
@@ -8,7 +7,11 @@
     </div>
     <div class="col-6 m-4">
       <!-- linked the form compnent -->
-      <app-form (addQoute)="addNewQoute($event)"></app-form>
+      <!-- (addQoute)="addNewQoute($event)" -->
+
+      <app-form></app-form>
+
+      <!-- <p *ngIf='quote.length > 5'>Your quote are too many</p> -->
     </div>
   </div>
 </div>

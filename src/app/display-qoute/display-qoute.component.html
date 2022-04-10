@@ -1,6 +1,11 @@
 <div class="display">
-    <h3 class="Dtitle">display Qoutes</h3>
-    lovers near hate each other but eat each other.
-    sdfghjnkml,dxfcgvbjhnkml,dfcgvbjhnkml,cdfgvgbnmfdcgvbnm,dfgcvbnmnfgh
-    fcghbjnmk,xcvbnm,gfhjhnm,dfghjkdfghhbjhvjjbjbjbbkkkkkkkkkkkkkkkkkkkk
+  <h3 class="Dtitle">display Qoutes</h3>
+  <div *ngFor="let x of quote; let i = index">
+    <p>
+      {{ x.id }}. Username is: {{ x.username | uppercase }},Author is :{{
+        x.author | uppercase
+      }},The Qoute is : {{ x.quote }} and Date Uploaded
+      {{ x.completeDate | date | uppercase }}
+    </p>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
 import { Quote } from '@angular/compiler';
 import { QuotesModel } from '../quotes-model';
 
@@ -8,12 +8,16 @@ import { QuotesModel } from '../quotes-model';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  newQuote = new QuotesModel();
+  newQuote = new QuotesModel(1, '', '', '', new Date());
 
-  @Output() addQoute = new EventEmitter<Quote>();
+  @Input() quotes: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();
 
-  submitQoute(){
-    this.addQoute.emit(this.newQuote)
+  quoteComplete(complete: boolean) {
+    this.isComplete.emit(complete);
+  }
+  submitQoute() {
+    // this.addQoute.emit(this.newQuote)
   }
   constructor() {}
 

@@ -4,7 +4,7 @@ form {
   text-align: center;
   text-transform: uppercase;
   background-color: rgb(14, 118, 118);
-  height: 20rem;
+  height: 30rem;
   border-radius: 0.3rem;
   padding: 0.1rem 1rem;
   margin: 1rem;
@@ -13,6 +13,7 @@ form {
 .form-group {
   width: 75%;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .form-control-btn:hover {
@@ -27,3 +28,7 @@ form {
   /* padding: 0 2rem; */
 }
 
+.red{
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+}
