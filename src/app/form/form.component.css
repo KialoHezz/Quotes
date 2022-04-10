@@ -3,18 +3,27 @@
 form {
   text-align: center;
   text-transform: uppercase;
-  background-color: aquamarine;
+  background-color: rgb(14, 118, 118);
   height: 20rem;
   border-radius: 0.3rem;
-  padding: 2rem 1rem;
+  padding: 0.1rem 1rem;
+  margin: 1rem;
+  font-family: "Germania One", cursive;
 }
 .form-group {
   width: 75%;
   margin: 0 auto;
 }
 
-.form-control-btn:hover{
-    color: aquamarine;
-    cursor: pointer;
+.form-control-btn:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+.form-control-date{
+  /* width: 9rem; */
+  border-radius: 0.3rem;
+  text-align: center;
+  /* padding: 0 2rem; */
 }
 
