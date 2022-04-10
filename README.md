@@ -1,4 +1,11 @@
-# Qoute
+# Project Title : 
+Qoute.
+
+# Authors :
+Hezron Ngoma.
+
+# Project Description :
+To use angular/cli to create app project where use can input information and upvote or downvote the Quote inputted in side showing the date and highest quote highted. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
@@ -25,3 +32,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Set instruction
+Clone this repository to a location in your file system : https://github.com/KialoHezz/Quotes
+
+Open terminal then navigate to the root folder of the application. cd QUOTES.
+
+# BDD
+> To have section of display information to the user.
+
+> To have Username,Author,date,Quote input.
+> 
+To have section to highlight the most  upvoted Quote.
+
+
+# Technologies Used:
+
+Angular/cli
+
+
+# Contact-Info:
+HEZZYKIALO@GMAILCOM.
+Phone: +254703701651
+
+# Licence $ CopyRight
+Quote APP Licence on 2022 and all rights are protected.[MIT]

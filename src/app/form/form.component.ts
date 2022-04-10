@@ -13,7 +13,7 @@ export class FormComponent implements OnInit {
   @Input() quotes: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  quoteComplete(complete: boolean) {
+  quoteComplete(complete: boolean,i:number) {
     this.isComplete.emit(complete);
   }
   submitQoute() {

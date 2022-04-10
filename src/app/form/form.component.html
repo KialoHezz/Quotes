@@ -1,32 +1,72 @@
-
 <!-- (ngSubmit)="addQoute()" -->
 <form  #QuoteForm="ngForm">
   <div class="form-group">
     <label for="userName">Username</label><br />
     <input
-      class="form-control" type="text" name="userName" id="userName" name="name" [(ngModel)]="newQuote.username" #username="ngModel" required/>
+      class="form-control"
+      type="text"
+      name="userName"
+      id="userName"
+      name="name"
+      [(ngModel)]="newQuote.username"
+      #username="ngModel"
+      required
+    />
   </div>
-  <div [hidden]="username.valid || username.pristine"><p class="red">Username is required</p></div>
+  <div [hidden]="username.valid || username.pristine">
+    <p class="red">Username is required</p>
+  </div>
   <!-- display {{newQuote.username}} -->
   <div class="form-group">
     <label for="author">Author</label><br />
-    <input class="form-control" type="text" name="author" id="author" [(ngModel)]="newQuote.author" />
-    <div [hidden]="username.valid || username.pristine"><p class="red">Author is required</p></div>
+    <input
+      class="form-control"
+      type="text"
+      name="author"
+      id="author"
+      [(ngModel)]="newQuote.author"
+    />
+    <div [hidden]="username.valid || username.pristine">
+      <p class="red">Author is required</p>
+    </div>
     <!-- display {{newQuote.description}} -->
   </div>
   <div class="form-group">
     <label for="qoute">Qoute</label><br />
-    <input class="form-control" type="textarea" name="qoute" id="qoute" rows="5" [(ngModel)] ="newQuote.quote"/>
-    <div [hidden]="username.valid || username.pristine"><p class="red">Write the Qoute is required (We upvote or downvote)</p></div>
+    <input
+      class="form-control"
+      type="textarea"
+      name="qoute"
+      id="qoute"
+      rows="5"
+      [(ngModel)]="newQuote.quote"
+    />
+    <div [hidden]="username.valid || username.pristine">
+      <p class="red">Write the Qoute is required (We upvote or downvote)</p>
+    </div>
   </div>
   <!-- display {{newQuote.quote}} -->
 
   <div class="form-group">
     <label class="ftitle" for="date">Date</label><br />
-    <input class="form-control-date" type="date" name="date" id="date" [(ngModel)]="newQuote.completeDate">
+    <input
+      class="form-control-date"
+      type="date"
+      name="date"
+      id="date"
+      [(ngModel)]="newQuote.completeDate"
+    />
   </div>
   <!-- display {{newQuote.completeDate}} -->
-  <div class="form-group">
-    <Button class="btn btn-secondary form-control-btn mt-4" (click)="quoteComplete(true)">ADD QOUTE</Button>
+  <div class="form-group" *ngFor="let i = index">
+    <Button
+      class="btn btn-secondary form-control-btn mt-4"
+      
+      >ADD QOUTE</Button
+    >
   </div>
 </form>
+<!-- 
+[newQuote]="Qoute"
+      (click)="quoteComplete(true)"
+      (isComplete)="completeGoal($event, i)" -->
