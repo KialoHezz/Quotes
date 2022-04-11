@@ -11,6 +11,16 @@ const $: any = '';
 })
 export class AppComponent {
   title = 'Qoute';
+
+  quote: QuotesModel[] = [
+    new QuotesModel(
+      1,
+      'Allan',
+      'still alive',
+      'never borrow confindence',
+      new Date(2020 / 3 / 14)
+    ),
+  ];
 }
 
 

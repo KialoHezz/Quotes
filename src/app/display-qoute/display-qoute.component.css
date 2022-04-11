@@ -3,11 +3,23 @@
   height: 30rem;
   border-radius: 0.3rem;
   padding: 0.1rem 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
   text-transform: capitalize;
 }
 
-.Dtitle{
-    text-align: center;
-    color: #000;
+.Dtitle {
+  text-align: center;
+  color: #000;
+}
+
+.btn-button {
+  padding: 5px 5px;
+  margin: 2px ;
+  text-transform: uppercase;
+}
+
+.btn-button:hover{
+  color: aquamarine;
+  background-color: #000;
+  cursor: pointer;
 }

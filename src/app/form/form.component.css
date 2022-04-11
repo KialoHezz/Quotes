@@ -22,10 +22,10 @@ form {
 }
 
 .form-control-date{
-  /* width: 9rem; */
+  width: 9rem;
   border-radius: 0.3rem;
   text-align: center;
-  /* padding: 0 2rem; */
+  padding: 0 2rem;
 }
 
 .red{

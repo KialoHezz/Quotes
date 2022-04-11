@@ -1,18 +1,17 @@
-<!-- (ngSubmit)="addQoute()" -->
-<form  #QuoteForm="ngForm">
+<form  ngSubmit="submitQuote()" #QuoteForm="ngForm">
   <div class="form-group">
     <label for="userName">Username</label><br />
     <input
       class="form-control"
       type="text"
-      name="userName"
-      id="userName"
-      name="name"
+      name="username"
+      id="userName"  
       [(ngModel)]="newQuote.username"
       #username="ngModel"
       required
     />
   </div>
+
   <div [hidden]="username.valid || username.pristine">
     <p class="red">Username is required</p>
   </div>
@@ -57,16 +56,10 @@
       [(ngModel)]="newQuote.completeDate"
     />
   </div>
-  <!-- display {{newQuote.completeDate}} -->
-  <div class="form-group" *ngFor="let i = index">
-    <Button
-      class="btn btn-secondary form-control-btn mt-4"
-      
-      >ADD QOUTE</Button
-    >
+  <div class="form-group">
+    <button class="btn btn-secondary" type="submit" (click)="quoteComplete(addQoute)">Add Quote</button>
   </div>
+  <!-- display {{newQuote.completeDate}} -->
 </form>
-<!-- 
-[newQuote]="Qoute"
-      (click)="quoteComplete(true)"
-      (isComplete)="completeGoal($event, i)" -->
+
+

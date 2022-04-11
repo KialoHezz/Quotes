@@ -14,8 +14,15 @@ export class DisplayQouteComponent implements OnInit {
       'never borrow confindence',
       new Date(2020 / 3 / 14)
     ),
-  ];
-
+  ]
+  
+  addNewQuote(quote:QuotesModel){
+    let quoteLength = this.quote.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quote.push(quote)
+  }
+  
   constructor() {}
 
   ngOnInit(): void {}

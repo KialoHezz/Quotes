@@ -1,5 +1,4 @@
 import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
-import { Quote } from '@angular/compiler';
 import { QuotesModel } from '../quotes-model';
 
 @Component({
@@ -10,15 +9,15 @@ import { QuotesModel } from '../quotes-model';
 export class FormComponent implements OnInit {
   newQuote = new QuotesModel(1, '', '', '', new Date());
 
-  @Input() quotes: Quote;
-  @Output() isComplete = new EventEmitter<boolean>();
+  @Output() addQoute = new EventEmitter<QuotesModel>();
 
-  quoteComplete(complete: boolean,i:number) {
-    this.isComplete.emit(complete);
-  }
   submitQoute() {
-    // this.addQoute.emit(this.newQuote)
+    this.addQoute.emit(this.newQuote);
   }
+
+  quoteComplete(addQoutes: any){
+    this.addQoute.emit(addQoutes);
+  };
   constructor() {}
 
   ngOnInit(): void {}
