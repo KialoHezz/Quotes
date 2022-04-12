@@ -10,3 +10,5 @@ export class QuotesModel {
     this.showDescription = false;
   }
 }
+
+
