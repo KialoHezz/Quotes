@@ -1,7 +1,5 @@
-<div class="row">
-   <h3 class="Dtitle">display Quotes</h3>
-  <div class="display col-md-6" *ngFor="let y of quote; let i = index">
-
+<div class="display row">
+  <div class="col" *ngFor="let y of quote; let i = index">
     <p>Username is: {{ y.username }}</p>
     <p>Author is :{{ y.author | uppercase }}</p>
     <p>The Quote is : {{ y.quote }}</p>
@@ -9,12 +7,10 @@
       Date Uploaded
       {{ y.completeDate | date | uppercase }}
     </p>
-
-    <button class="btn btn-secondary btn-button">upvote</button>
     <button class="btn btn-secondary btn-button">Downvote</button>
+    <button class="btn btn-secondary btn-button">upvote</button>
   </div>
-
-  <div class="col-md-6">
-    <app-form (addQuote)="addNewQuote($event)"> </app-form>
-  </div>
+</div>
+<div class="row">
+  <app-form (addQuote)="addNewQuote($event)"> </app-form>
 </div>

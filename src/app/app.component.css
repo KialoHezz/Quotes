@@ -32,15 +32,40 @@ font-family: 'Smooch Sans', sans-serif;*/
 
 .logo {
   font-family: "Germania One", cursive;
-  margin-left: 36rem;
-  margin-top: 3rem;
-  font-size: 2rem;
-  
+  height: 2rem;
+  margin: 0 0 2rem 0; 
+  padding: 0.2rem;
 }
+.nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+
 p {
   width: 15%;
   text-align: center;
 }
 span {
   color: aqua;
+}
+
+.navigation{
+  padding: 0 .4rem;
+  margin: 2rem 4rem;
+}
+
+a{
+  text-transform: uppercase;
+  padding: 2rem 1rem;
+  color: aqua;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+}
+a:hover{
+  cursor: pointer;
+  background-color: brown;
+  border-radius: 2rem;
+  transition: 3s;
 }
