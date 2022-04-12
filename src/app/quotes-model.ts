@@ -1,4 +1,5 @@
 export class QuotesModel {
+  showDescription: boolean;
   constructor(
     public id: number,
     public username: string,
@@ -6,6 +7,6 @@ export class QuotesModel {
     public quote: string,
     public completeDate: Date
   ) {
-    
+    this.showDescription = false;
   }
 }

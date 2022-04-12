@@ -1,16 +1,17 @@
-<form  ngSubmit="submitQuote()" #QuoteForm="ngForm">
+<form  (ngSubmit)="submitQuote()" #QuoteForm="ngForm">
   <div class="form-group">
-    <label for="userName">Username</label><br />
+    <label for="username">Username</label><br />
     <input
       class="form-control"
       type="text"
       name="username"
-      id="userName"  
+      id="username"  
       [(ngModel)]="newQuote.username"
       #username="ngModel"
       required
     />
   </div>
+
 
   <div [hidden]="username.valid || username.pristine">
     <p class="red">Username is required</p>
@@ -23,43 +24,50 @@
       type="text"
       name="author"
       id="author"
+      #author="ngModel"
       [(ngModel)]="newQuote.author"
     />
-    <div [hidden]="username.valid || username.pristine">
+    <div [hidden]="author.valid || author.pristine">
       <p class="red">Author is required</p>
     </div>
     <!-- display {{newQuote.description}} -->
   </div>
   <div class="form-group">
-    <label for="qoute">Qoute</label><br />
+    <label for="quote">Quote</label><br />
     <input
       class="form-control"
       type="textarea"
-      name="qoute"
-      id="qoute"
+      name="quote"
+      id="quote"
       rows="5"
       [(ngModel)]="newQuote.quote"
+      #quote = "ngModel"
+      required
     />
-    <div [hidden]="username.valid || username.pristine">
-      <p class="red">Write the Qoute is required (We upvote or downvote)</p>
+    <div [hidden]="quote.valid || quote.pristine">
+      <p class="red">Write the Quote is required (We upvote or downvote)</p>
     </div>
   </div>
   <!-- display {{newQuote.quote}} -->
 
   <div class="form-group">
-    <label class="ftitle" for="date">Date</label><br />
+    <label class="ftitle" for="completeDate">Date</label><br />
     <input
       class="form-control-date"
       type="date"
-      name="date"
-      id="date"
+      name="completeDate"
+      id="completeDate"
       [(ngModel)]="newQuote.completeDate"
+      #completeDate = "ngModel"
+      required
     />
   </div>
   <div class="form-group">
-    <button class="btn btn-secondary" type="submit" (click)="quoteComplete(addQoute)">Add Quote</button>
+    <button class="btn btn-secondary" type="submit" >Add Quote</button>
   </div>
+
   <!-- display {{newQuote.completeDate}} -->
 </form>
 
 
+ 
