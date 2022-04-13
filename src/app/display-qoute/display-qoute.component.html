@@ -9,8 +9,10 @@
     </p>
     <button class="btn btn-secondary btn-button" (click)="counter = counter +1">upvote</button><span>{{counter}}</span>
     <button class="btn btn-secondary btn-button" (click)="decrement = decrement + 1">Downvote</button><span>{{decrement}}</span>
+    <button class="btn btn-secondary">More info</button>
     
-    <app-quote-details></app-quote-details>
+    
+    <!-- <app-quote-details []="quote" (onDelete)="deleteQuote($event,i)"></app-quote-details> -->
   </div>
 </div>
 <div class="row">

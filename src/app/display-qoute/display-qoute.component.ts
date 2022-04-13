@@ -12,7 +12,7 @@ export class DisplayQouteComponent implements OnInit {
       'Allan',
       'still alive',
       'never borrow confindence',
-      new Date(2020 / 3 / 14)
+      new Date()
     ),
   ];
 
@@ -28,6 +28,17 @@ export class DisplayQouteComponent implements OnInit {
   //Decrement downVote
   decrement: number = 0;
 
+  deleteQuote(isComplete:any, index:number) {
+    if (isComplete) {
+      let toDelete = confirm(
+        `Are you sure you want to delete ${this.quote[index].username}?`
+      );
+
+      if (toDelete) {
+        this.quote.splice(index, 1);
+      }
+    }
+  }
   constructor() {}
 
   ngOnInit(): void {}
