@@ -1,5 +1,5 @@
 export class QuotesModel {
-  showDescription: boolean;
+  showMore: boolean;
   constructor(
     public id: number,
     public username: string,
@@ -7,7 +7,8 @@ export class QuotesModel {
     public quote: string,
     public completeDate: Date
   ) {
-    this.showDescription = false;
+    //hide by default
+    this.showMore = false;
   }
 }
 

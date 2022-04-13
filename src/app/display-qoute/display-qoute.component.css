@@ -1,7 +1,8 @@
 .display {
+  display: flex;
   background-color: rgba(0, 255, 255, 0.535);
   border-radius: 0.3rem;
-  /* width: 25rem; */
+  height: 20rem;
   padding: 0.1rem 1rem;
   text-transform: capitalize;
   border-radius: 0.3rem;
@@ -17,20 +18,16 @@
 
 .btn-button {
   padding: 5px 5px;
-  margin: 2px ;
+  margin: 2px;
   text-transform: uppercase;
 }
 
-.btn-button:hover{
+.btn-button:hover {
   color: aquamarine;
   background-color: #000;
   cursor: pointer;
 }
 
-span{
-  margin-left: .2rem;
-  color: white;
-  font-size: 2rem;
-  margin: 2rem 1rem;
+.align {
+  margin-left: 4rem;
 }
-

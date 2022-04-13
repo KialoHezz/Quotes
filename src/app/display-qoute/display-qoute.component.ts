@@ -6,7 +6,7 @@ import { QuotesModel } from '../quotes-model';
   styleUrls: ['./display-qoute.component.css'],
 })
 export class DisplayQouteComponent implements OnInit {
-  quote: QuotesModel[] = [
+  quotes: QuotesModel[] = [
     new QuotesModel(
       1,
       'Allan',
@@ -17,28 +17,30 @@ export class DisplayQouteComponent implements OnInit {
   ];
 
   addNewQuote(quote: QuotesModel) {
-    let quoteLength = this.quote.length;
+    let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate);
-    this.quote.push(quote);
+    this.quotes.push(quote);
   }
 
-  //increment upVote
-  counter: number = 0;
-  //Decrement downVote
-  decrement: number = 0;
-
-  deleteQuote(isComplete:any, index:number) {
+  deleteQuote(isComplete: any, index: number) {
     if (isComplete) {
       let toDelete = confirm(
-        `Are you sure you want to delete ${this.quote[index].username}?`
+        `Are you sure you want to delete ${this.quotes[index].username}?`
       );
 
       if (toDelete) {
-        this.quote.splice(index, 1);
+        this.quotes.splice(index, 1);
       }
     }
   }
+
+  // @Output() isComplete = new EventEmitter<boolean>();
+
+  show(index: number) {
+    this.quotes[index].showMore = !this.quotes[index].showMore;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
