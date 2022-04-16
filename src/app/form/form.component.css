@@ -4,14 +4,14 @@ form {
   text-align: center;
   text-transform: uppercase;
   background-color: rgb(14, 118, 118);
-  height: 30rem;
+  height: auto;
   border-radius: 0.3rem;
-  padding: 0.1rem 1rem;
+  padding: 1rem 1rem;
   margin: 1rem;
   font-family: "Germania One", cursive;
 }
 .form-group {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 1rem;
 }
@@ -21,14 +21,14 @@ form {
   cursor: pointer;
 }
 
-.form-control-date{
+.form-control-date {
   width: 9rem;
   border-radius: 0.3rem;
   text-align: center;
   padding: 0 2rem;
 }
 
-.red{
+.red {
   color: red;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }

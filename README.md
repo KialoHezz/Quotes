@@ -48,7 +48,9 @@ To have section to highlight the most  upvoted Quote.
 
 # Technologies Used:
 
-Angular/cli
+ANGULAR/CLI
+HTML
+CSS
 
 
 # Contact-Info:

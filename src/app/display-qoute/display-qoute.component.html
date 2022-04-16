@@ -1,12 +1,13 @@
-<div class="container">
-  <div class="display">
-    <div class="col" *ngFor="let quote of quotes; let i = index">
-      <p>The Quote is : {{ quote.quote }}</p>
-
-      <button class="btn btn-secondary btn-button align" (click)="show(i)">
-        Details
-      </button>
-
+<div class="container wrapper">
+  <div class="form-container">
+    <app-form (addQuote)="addNewQuote($event)"> </app-form>
+  </div>
+  <div class="quote-container">
+    <div class="display" *ngFor="let quote of quotes; let i = index">
+      <div class="title-container">
+        <p class="title">The Quote is : {{ quote.quote }}</p>
+        <p>Author is: {{ quote.author }}</p>
+      </div>
       <div>
         <!-- child component quotes dataflow from child to parent where am in now -->
         <app-quote-details
@@ -15,9 +16,21 @@
           *ngIf="quote.showMore"
         ></app-quote-details>
       </div>
+      <button class="btn btn-secondary btn-button" (click)="show(i)">
+        Details
+      </button>
     </div>
   </div>
-  <div class="row">
-    <app-form (addQuote)="addNewQuote($event)"> </app-form>
-  </div>
+</div>
+<!-- //mae my loader available front-end -->
+<!-- <ng-progress></ng-progress> -->
+
+
+
+<!-- dispal the consue of Api to the front-end -->
+<div class="row">
+  <blockquote class="blockquote text-center text-white">
+    <p class="mb-0">{{goals.goal}}</p>
+    <footer class="blockquote-footer"><cite>{{goals.author}}</cite></footer>
+  </blockquote>
 </div>

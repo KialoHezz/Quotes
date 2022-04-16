@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { QuotesModel } from './quotes-model';
 
 
+
 const $: any = '';
 
 @Component({
