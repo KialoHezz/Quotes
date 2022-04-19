@@ -14,6 +14,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import { DateCountPipe } from './date-count.pipe';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DateCountPipe } from './date-count.pipe';
     QuoteDetailsComponent,
 
     DateCountPipe,
+     AboutComponent,
   ],
   imports: [
     BrowserModule,
